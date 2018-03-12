@@ -18,10 +18,10 @@ function listTeam (...teamMates) {
   return teamMates;
 }
 
-console.log(listTeam('tori', 'jeff', 'michelle', 'alex'));
+// console.log(listTeam('tori', 'jeff', 'michelle', 'alex'));
 
 /////////////////////////////////////////////////////////////////////////////
 
 // or simply convert outright with Array.of
 
-console.log(Array.of(1, 1, 2, 3, 5, 8, 13));
+// console.log(Array.of(1, 1, 2, 3, 5, 8, 13));

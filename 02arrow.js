@@ -7,7 +7,7 @@
 // additionally, do not define arguments object, but accesses the arguments object from the enclosing scope
 
 
-// let's reformat this arrow function to include better practices!
+// let's reformat this arrow function to make it more concise
 const echo = (x) => {
   return x;
 }
@@ -38,17 +38,10 @@ Note: The default this value of a setTimeout callback will still be the window o
 
 /////////////////////////////////////////////////////////////////////////////
 
-function HSAMember() {
-  this.plan = 'HSA';
-}
-
-var newMember = new HSAMember();
-
-console.log(newMember.plan);
-
-/////////////////////////////////////////////////////////////////////////////
+// some style choices
 
 const pets = ['rosie', 'jubilee', 'annie', 'dillon'];
+const lastName = 'smith';
 
 // const petNames = pets.map(function(pet) {
 //   return `${pet}`;
@@ -62,16 +55,24 @@ const pets = ['rosie', 'jubilee', 'annie', 'dillon'];
 //   return `${pet}`;
 // })
 
-const lastName = 'smith';
+const fullPetNames = pets.map(pet => `${pet} ${lastName}`);
 
-const petNames = pets.map(pet => `${pet} ${lastName}`);
+// console.log(fullPetNames);
 
-// console.log(petNames);
+/////////////////////////////////////////////////////////////////////////////
+
+// don't use an arrow function if you need to use the arguments object
+
+const count = (x, y) => {
+  return Array.from(arguments);
+}
+
+// console.log(count(1, 2));
 
 /////////////////////////////////////////////////////////////////////////////
 
 // what is another case where I can't use an arrow function?
-// when a method is on an object and utilizes 'this'
+// when a method is bound to an object and utilizes 'this'
 
 const dog = {
   breed : 'pomeranian',
@@ -83,4 +84,4 @@ const dog = {
   }
 }
 
-console.log(dog.getBreed());
+// console.log(dog.getBreed());
