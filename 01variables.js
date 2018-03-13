@@ -1,23 +1,19 @@
 // scoping review
 // var scoped to a function- if not in function, scoped globally
-// let and const are block scoped
-// cannot do re-assignment with a const, but that does NOT mean it is immutable - it is immutable binding
-// (properties of a const variable can be changed)
-// if you need to freeze an object, use Object.freeze(obj)
 
 var test = 'foo';
 
-function catsFxn () {
-  var cats = true;
+function testFunction () {
+  var bar = true;
   return test;
 }
 
-console.log(catsFxn());
+console.log(testFunction());
 
-console.log(cats);
+console.log(bar);
 
 /////////////////////////////////////////////////////////////////////////////
-
+// let and const are block scoped
 
 if (true) {
   var animals = true;
@@ -26,17 +22,20 @@ if (true) {
 }
 
 console.log(animals);
-console.log(dogs);
-console.log(birds);
+// console.log(dogs);
+// console.log(birds);
 
 /////////////////////////////////////////////////////////////////////////////
+// cannot re-assign a const, but that does NOT mean it is immutable - it is immutable binding
+// (properties of a const variable can be changed)
+// if you need to freeze an object, use Object.freeze(obj)
 
 const me = {
   name : 'tori',
   age : 28
 }
 
-// me = 'tori';
+me = 'tori';
 
 me.age = 40;
 

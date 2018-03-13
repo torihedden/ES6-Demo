@@ -23,19 +23,17 @@ const memberData = {
 // console.log(age, dental);
 
 // new way :
-const {age : memberAge, dependents, paymentHistory : payments} = memberData;
+const {age, dependents, paymentHistory : payments} = memberData;
 const {dental : isDental, pharmacy : isPharmacy} = memberData.policies;
-console.log(memberAge);
-console.log(dependents);
+
+console.log(age);
 console.log(payments);
 console.log(isDental);
 console.log(isPharmacy);
 
+/////////////////////////////////////////////////////////////////////////////
+// .filter isn't new but is used with arrow functions a lot
 
 const paymentThreshold = 200;
 
-function highPayments (amt) {
-  return amt > paymentThreshold;
-}
-
-// console.log(payments.filter(highPayments));
+console.log(payments.filter(payment => payment > paymentThreshold));

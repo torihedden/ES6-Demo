@@ -13,8 +13,8 @@ function listTeam (...teamMates) {
   for (const member of teamMates) {
     console.log(`${member} is a developer`);
   }
-  // this works because rest parameter syntax allows us to represent
-  // an indefinite number of arguments as an array, seen below
+  /* this works because rest parameter syntax allows us to represent
+  an indefinite number of arguments as an array, seen below */
   return teamMates;
 }
 

@@ -1,7 +1,7 @@
 // Arrow functions are NOT synonymous with normal functions
 // they are not named functions - they are anonymous
 // they have concise syntax
-// have implicit returns
+// single line functions have implicit returns
 // doesn't re-bind value of "this" to within current scope
 // "this" is inherited from whatever the parent scope is
 // additionally, do not define arguments object, but accesses the arguments object from the enclosing scope
@@ -43,16 +43,16 @@ Note: The default this value of a setTimeout callback will still be the window o
 const pets = ['rosie', 'jubilee', 'annie', 'dillon'];
 const lastName = 'smith';
 
-// const petNames = pets.map(function(pet) {
-//   return `${pet}`;
+// const fullPetNames = pets.map(function(pet) {
+//   return `${pet} ${lastName}`;
 // })
 
-// const petNames = pets.map((pet) => {
-//   `${pet}`;
+// const fullPetNames = pets.map((pet) => {
+//   return `${pet} ${lastName}`;
 // })
 
-// const petNames = pets.map(pet => {
-//   return `${pet}`;
+// const fullPetNames = pets.map(pet => {
+//   return `${pet} ${lastName}`;
 // })
 
 const fullPetNames = pets.map(pet => `${pet} ${lastName}`);
@@ -67,7 +67,7 @@ const count = (x, y) => {
   return Array.from(arguments);
 }
 
-// console.log(count(1, 2));
+// console.log(count(1, 2, 4, 8));
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -84,4 +84,5 @@ const dog = {
   }
 }
 
+// console.log(dog.bark());
 // console.log(dog.getBreed());

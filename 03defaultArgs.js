@@ -9,7 +9,8 @@ function greet (x, greeting) {
   return greeting + ', ' + x;
 }
 
-console.log(greet(undefined));
+console.log(greet());
+console.log(greet(undefined, undefined));
 console.log(greet('tori'));
 console.log(greet('tori', 'good afternoon'));
 
@@ -24,6 +25,7 @@ function greetES6 (x = user, greet = greeting) {
   return `${greet}, ${x}`;
 }
 
-console.log(greetES6(undefined));
+console.log(greetES6());
+console.log(greetES6(undefined, undefined));
 console.log(greetES6('tori'));
 console.log(greetES6('tori', 'good afternoon'));

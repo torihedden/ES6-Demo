@@ -1,3 +1,5 @@
+
+// rest operator can take an arbitrary number of parameters and convert to an array, can use array methods on args
 function formatMoney (...x) {
   return x.map(x => `$${x}.00`);
 }
@@ -24,8 +26,11 @@ const triangle = [...places, 'chapel hill'];
 
 console.log(triangle);
 
-let capital, cities;
-[capital, ...cities] = triangle;
+// let capital, cities;
+// [capital, ...cities] = triangle;
+
+// the following line is equivalent to the preceeding two commented out lines
+const [capital, ...cities] = triangle;
 
 console.log(capital);
 console.log(cities);
