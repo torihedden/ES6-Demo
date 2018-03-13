@@ -8,20 +8,19 @@ const teamArray = Array.from(team);
 
 /////////////////////////////////////////////////////////////////////////////
 
+// or simply convert outright with Array.of
+
+// console.log(Array.of(1, 1, 2, 3, 5, 8, 13));
+
+
+/////////////////////////////////////////////////////////////////////////////
+
 function listTeam (...teamMates) {
 
   for (const member of teamMates) {
     console.log(`${member} is a developer`);
   }
-  /* this works because rest parameter syntax allows us to represent
-  an indefinite number of arguments as an array, seen below */
   return teamMates;
 }
 
-// console.log(listTeam('tori', 'jeff', 'michelle', 'alex'));
-
-/////////////////////////////////////////////////////////////////////////////
-
-// or simply convert outright with Array.of
-
-// console.log(Array.of(1, 1, 2, 3, 5, 8, 13));
+// console.log(listTeam('tori', 'jeff', 'michelle', 'alex', 'ward'));

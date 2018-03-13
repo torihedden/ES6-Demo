@@ -8,10 +8,8 @@ console.log(formatMoney(25, 45, 100, 500));
 
 /////////////////////////////////////////////////////////////////////////////
 
-// to directly use array methods on the 'array-like' arguments object, it must first be converted to a real array
-
 function totalPayments (...y) {
-  console.log(y); // args now array due to use of rest
+  console.log(y);
   return y.reduce((a, b) => a + b, 0);
 }
 
@@ -29,9 +27,10 @@ console.log(triangle);
 // let capital, cities;
 // [capital, ...cities] = triangle;
 
-// the following line is equivalent to the preceeding two commented out lines
+// the following line is equivalent to the preceeding two commented-out lines
 const [capital, ...cities] = triangle;
 
+console.log(triangle);
 console.log(capital);
 console.log(cities);
 
